@@ -10,10 +10,18 @@ public class Calculator {
         System.out.println("Second number?");
         int secNum = input.nextInt(); //saves input of second num
 
-        System.out.println(firstNum + " added with " + secNum + " equals " + (firstNum + secNum));
+        System.out.println("Please choose if you would like to add or subtract your numbers.\ntype \"a\" to add or \"s\" to subtract");
+        input.nextLine();
+        String addOrSub = input.next();//saves operation input
+
+        if (addOrSub.equals("a") || addOrSub.equals("A")) {
+            System.out.println(firstNum + " added with " + secNum + " equals " + (firstNum + secNum)); //add numbers
+        } else if (addOrSub.equals("s") || addOrSub.equals("S")) {
+            System.out.println(firstNum + " subtracted with " + secNum + " equals " + (firstNum - secNum)); //subtracts numbers
+        } else {
+            System.out.println("That was not a valid entry, goodbye"); //if user hits wrong button
+
+        }
 
     }
 }
-
-/*Ask the user to enter in two whole numbers, and then print out the result of the two
-numbers added together.*/
