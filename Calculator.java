@@ -4,7 +4,7 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); //sets up scanner
 
-        System.out.println("Please enter two whole numbers\nFirst number?");
+        System.out.println("Please enter two numbers\nFirst number?");
         double firstNum = input.nextDouble(); //saves input of first num
 
         System.out.println("Second number?");
@@ -21,11 +21,15 @@ public class Calculator {
         } else if (addOrSub.equals("m") || addOrSub.equals("M")) {
             System.out.println(firstNum + " multiplied with " + secNum + " equals " + (firstNum * secNum));
         } else if (addOrSub.equals("d") || addOrSub.equals("D")) {
-            System.out.println(firstNum + " divided with " + secNum + " equals " + (firstNum / secNum));
+            if (secNum == 0) {
+                System.out.println("Error: Divide by Zero");
+            } else {
+                System.out.println(firstNum + " divided with " + secNum + " equals " + (firstNum / secNum));
+            }
         } else {
             System.out.println("That was not a valid entry, goodbye"); //if user hits wrong button
 
-        } 
+        }
 
     }
 }
