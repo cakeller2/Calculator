@@ -10,7 +10,7 @@ public class Calculator {
         System.out.println("Second number?");
         int secNum = input.nextInt(); //saves input of second num
 
-        System.out.println("Please choose if you would like to add or subtract your numbers.\ntype \"a\" to add or \"s\" to subtract");
+        System.out.println("Please choose if you would like to add or subtract your numbers.\ntype \"a\" to add, \"s\" to subtract, \"m\" to multiply, or \"d\" to divide");
         input.nextLine();
         String addOrSub = input.next();//saves operation input
 
@@ -18,6 +18,10 @@ public class Calculator {
             System.out.println(firstNum + " added with " + secNum + " equals " + (firstNum + secNum)); //add numbers
         } else if (addOrSub.equals("s") || addOrSub.equals("S")) {
             System.out.println(firstNum + " subtracted with " + secNum + " equals " + (firstNum - secNum)); //subtracts numbers
+        } else if (addOrSub.equals("m") || addOrSub.equals("M")) {
+            System.out.println(firstNum + " multiplied with " + secNum + " equals " + (firstNum * secNum));
+        } else if (addOrSub.equals("d") || addOrSub.equals("D")) {
+            System.out.println(firstNum + " divided with " + secNum + " equals " + (firstNum / secNum));
         } else {
             System.out.println("That was not a valid entry, goodbye"); //if user hits wrong button
 
